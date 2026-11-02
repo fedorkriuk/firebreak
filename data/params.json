@@ -1,0 +1,61 @@
+{
+  "_comment": "Every number the network model uses lives here. Change it here, never in code.",
+  "grid": {
+    "vn_kv": 11.0,
+    "s_sc_max_mva": 50.0,
+    "s_sc_min_mva": 30.0,
+    "rx_max": 0.30,
+    "rx_min": 0.30,
+    "x0x_max": 1.0,
+    "r0x0_max": 0.30,
+    "_note": "Rural 11 kV feeder end. 50 MVA fault level is an ASSUMPTION - confirm with network operator data."
+  },
+  "transformer": {
+    "sn_mva": 0.2,
+    "vn_hv_kv": 11.0,
+    "vn_lv_kv": 0.4,
+    "vk_percent": 4.0,
+    "vkr_percent": 1.0,
+    "pfe_kw": 0.4,
+    "i0_percent": 0.3,
+    "vector_group": "Dyn",
+    "vk0_percent": 4.0,
+    "vkr0_percent": 1.0,
+    "mag0_percent": 100.0,
+    "mag0_rx": 0.0,
+    "si0_hv_partial": 0.9,
+    "_note": "200 kVA 11/0.4 kV Dyn11 pole-mount. 4% impedance typical for this size."
+  },
+  "lv": {
+    "vn_kv": 0.4,
+    "line_type": "NAYY 4x150 SE",
+    "r0_factor": 3.0,
+    "x0_factor": 3.0,
+    "c0_factor": 1.0,
+    "_note": "Zero-sequence line parameters approximated as 3x positive sequence for 4-core LV cable."
+  },
+  "feeders": {
+    "pcc_to_bus": {"length_km": 0.02},
+    "fire_station": {"length_km": 0.08},
+    "water_pump": {"length_km": 0.15},
+    "health_clinic": {"length_km": 0.06},
+    "telecom_tower": {"length_km": 0.12}
+  },
+  "pv": {
+    "p_mw": 0.030,
+    "sn_mva": 0.033,
+    "fault_k": 1.2,
+    "_note": "30 kWp from size_system.py. fault_k = short-circuit current as multiple of rated."
+  },
+  "battery": {
+    "p_mw": 0.020,
+    "sn_mva": 0.022,
+    "fault_k": 1.2,
+    "energy_kwh": 80,
+    "_note": "80 kWh, 20 kW grid-forming inverter. Acts as the voltage source when islanded."
+  },
+  "load_defaults": {
+    "power_factor": 0.9,
+    "_note": "Loads read from critical_load_list.csv. avg kW = rated_W x qty x duty/100."
+  }
+}
