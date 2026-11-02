@@ -1,0 +1,8 @@
+GRID    R2->R1 at   6614 A : t_R2=0.053s  t_R1=0.378s  margin=0.325s  OK (need 0.3)
+GRID    R3->R1 at   6614 A : t_R3=0.073s  t_R1=0.378s  margin=0.305s  OK (need 0.3)
+GRID    R4->R1 at   6614 A : t_R4=0.051s  t_R1=0.378s  margin=0.327s  OK (need 0.3)
+GRID    R5->R1 at   6614 A : t_R5=0.046s  t_R1=0.378s  margin=0.332s  OK (need 0.3)
+ISLAND  R2 at     95 A : pickup=13.2A  sensitivity=7.2x  t=0.174s  OK
+ISLAND  R3 at     95 A : pickup=13.2A  sensitivity=7.2x  t=0.174s  OK
+ISLAND  R4 at     95 A : pickup=10.1A  sensitivity=9.4x  t=0.152s  OK
+ISLAND  R5 at     95 A : pickup=5.4A  sensitivity=17.6x  t=0.118s  OK

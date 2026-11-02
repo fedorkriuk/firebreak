@@ -1,0 +1,158 @@
+{
+  "act1": {
+    "events": [
+      [
+        1.0,
+        "Upstream feeder de-energised \u2014 grid lost"
+      ],
+      [
+        1.099,
+        "ROCOF 1.7 Hz/s > 1.0 Hz/s \u2014 loss of mains detected"
+      ],
+      [
+        1.159,
+        "PCC breaker OPEN \u2014 microgrid islanded"
+      ],
+      [
+        1.199,
+        "Battery inverter \u2192 grid-forming (droop + V control)"
+      ],
+      [
+        1.249,
+        "Frequency nadir 49.60 Hz (limit 47.5 Hz)"
+      ],
+      [
+        1.249,
+        "Tier 3 load shed (7.5 kW)"
+      ],
+      [
+        1.865,
+        "Frequency restored to 50.00 Hz (secondary control)"
+      ]
+    ],
+    "meta": {
+      "t_loss": 1.0,
+      "t_detect": 1.099,
+      "t_open": 1.159,
+      "t_gf": 1.199,
+      "t_shed": 1.249,
+      "f_nadir": 49.598559200149175,
+      "detect_ms": 99.0,
+      "open_ms": 159.0,
+      "l1": 3.00217,
+      "l2": 0.044,
+      "l3": 7.5249999999999995,
+      "pv": 3.3
+    }
+  },
+  "act2": {
+    "events": [
+      [
+        1.0,
+        "11:30 fault on water-pump feeder (arcing, 1 \u03a9) \u2014 voltage collapses"
+      ],
+      [
+        1.177,
+        "R3 trips (group 2): 93 A \u2192 0.177 s"
+      ],
+      [
+        1.237,
+        "Breaker on water-pump feeder OPEN \u2014 fault cleared"
+      ],
+      [
+        1.387,
+        "Fire station, clinic and telecom stay ON \u2014 selective trip"
+      ]
+    ],
+    "meta": {
+      "t_fault": 1.0,
+      "t_trip": 1.177,
+      "t_clear": 1.237,
+      "i_fault": 93.3560620060604,
+      "t_op_g2": 0.17700000000000005,
+      "t_op_g1": 1.1270418157985262,
+      "inv_limit": 0.5,
+      "v_sag": 0.4125000000000001,
+      "i_lim": 95.26279441628826,
+      "p_fault_kw": 27.22500000000001,
+      "run_kw": {
+        "fire_station": 0.325,
+        "water_pump": 0.12,
+        "health_clinic": 0.63717,
+        "telecom_tower": 1.92
+      }
+    }
+  },
+  "act3": {
+    "events": [
+      [
+        0.0,
+        "Island begins 17:00 \u2014 battery 100 %, Tier 3 shed"
+      ],
+      [
+        825.0,
+        "06:45  Battery minimum 28 %"
+      ],
+      [
+        1020.0,
+        "10:00  Solar surplus \u2014 pump starts (Tier 2)"
+      ],
+      [
+        1110.0,
+        "11:30  Fault on pump feeder \u2014 R3 trips (see Act 2)"
+      ],
+      [
+        1155.0,
+        "12:15  Pump feeder checked and restored"
+      ],
+      [
+        1439.0,
+        "17:00  24 h complete \u2014 every Tier 1 load served"
+      ]
+    ],
+    "meta": {
+      "soc_min": 28.247181915499798,
+      "soc_end": 74.4793209762848,
+      "t_min": "06:45",
+      "soc_at_fault": 48.53772066601225,
+      "pv_at_fault": 9.52967818345839,
+      "e_t1": 81.5514292716536,
+      "e_pv": 92.22848735384316,
+      "e_t2": 23.15682973902812,
+      "unserved": 0.0
+    }
+  },
+  "act4": {
+    "events": [
+      [
+        0.5,
+        "Upstream feeder re-energised \u2014 grid voltage present"
+      ],
+      [
+        2.5,
+        "Grid stable \u2014 synchronising (battery adjusts f and V)"
+      ],
+      [
+        7.891,
+        "Sync-check OK (window \u00b110\u00b0): \u0394\u03b8 3.0\u00b0, \u0394f 0.022 Hz, \u0394V 0.0 %"
+      ],
+      [
+        7.9510000000000005,
+        "PCC breaker CLOSED \u2014 reconnected"
+      ],
+      [
+        9.451,
+        "Tier 3 loads restored (5.7 kW)"
+      ],
+      [
+        11.951,
+        "Battery \u2192 grid-following, recharging from grid"
+      ]
+    ],
+    "meta": {
+      "t_ret": 0.5,
+      "t_close": 7.951,
+      "close_angle": 2.9950139381003282
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+ "load_kWh_island": 81.6,
+ "soc_min": 45.5,
+ "t_soc_min_h": 30.77,
+ "soc_end_island": 100.0,
+ "t_island": 17.0,
+ "t_reconnect": 41.000277777777775,
+ "v_min": 1.0,
+ "f_min": 49.944,
+ "soc_min_usable": 31.8
+}

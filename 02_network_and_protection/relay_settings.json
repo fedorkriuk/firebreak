@@ -1,0 +1,88 @@
+{
+  "constants": {
+    "grading_margin_s": 0.3,
+    "curve": "IEC standard inverse",
+    "k": 0.14,
+    "alpha": 0.02,
+    "min_sensitivity": 2.0
+  },
+  "coordination_current_a": 6614,
+  "relays": {
+    "R2": {
+      "location": "feeder_fire_station",
+      "bus_protected": "fire_station",
+      "flc_a": 10.2,
+      "inrush_a": 0.0,
+      "group1": {
+        "pickup_a": 13.2,
+        "tms": 0.05,
+        "curve": "IEC_SI"
+      },
+      "group2": {
+        "pickup_a": 13.2,
+        "tms": 0.05,
+        "curve": "IEC_SI"
+      }
+    },
+    "R3": {
+      "location": "feeder_water_pump",
+      "bus_protected": "water_pump",
+      "flc_a": 10.1,
+      "inrush_a": 62.3,
+      "group1": {
+        "pickup_a": 68.5,
+        "tms": 0.05,
+        "curve": "IEC_SI"
+      },
+      "group2": {
+        "pickup_a": 13.2,
+        "tms": 0.05,
+        "curve": "IEC_SI"
+      }
+    },
+    "R4": {
+      "location": "feeder_health_clinic",
+      "bus_protected": "health_clinic",
+      "flc_a": 7.7,
+      "inrush_a": 0.0,
+      "group1": {
+        "pickup_a": 10.1,
+        "tms": 0.05,
+        "curve": "IEC_SI"
+      },
+      "group2": {
+        "pickup_a": 10.1,
+        "tms": 0.05,
+        "curve": "IEC_SI"
+      }
+    },
+    "R5": {
+      "location": "feeder_telecom_tower",
+      "bus_protected": "telecom_tower",
+      "flc_a": 4.2,
+      "inrush_a": 0.0,
+      "group1": {
+        "pickup_a": 5.4,
+        "tms": 0.05,
+        "curve": "IEC_SI"
+      },
+      "group2": {
+        "pickup_a": 5.4,
+        "tms": 0.05,
+        "curve": "IEC_SI"
+      }
+    },
+    "R1": {
+      "location": "pcc_incomer",
+      "bus_protected": "microgrid_bus",
+      "pcc_import_a": 32.2,
+      "pcc_export_a": 43.3,
+      "group1": {
+        "pickup_a": 56.3,
+        "tms": 0.27,
+        "curve": "IEC_SI"
+      },
+      "group2": null
+    }
+  }
+}
